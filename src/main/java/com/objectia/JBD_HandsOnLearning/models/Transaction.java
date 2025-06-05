@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
-@Table(name = "transaction")
+@Table(name = "transaction", schema = "cms")
 @Getter
 @Setter
 @Audited
@@ -31,6 +31,4 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "card_id")
     private Card card;
-
-
 }

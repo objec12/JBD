@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 @Entity
-@Table(name = "cards")
+@Table(name = "cards", schema = "cms")
 @Getter
 @Setter
 @Audited

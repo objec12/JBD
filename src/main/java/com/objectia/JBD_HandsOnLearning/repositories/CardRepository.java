@@ -11,5 +11,7 @@ import java.util.UUID;
 public interface CardRepository extends JpaRepository<Card, UUID> {
     Card findByCvv(String cvv);
 
+    Card findByCardNumber(String cardNumber);
+
 
 }

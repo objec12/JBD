@@ -35,7 +35,6 @@ public class CardService {
             randomDigits.append(random.nextInt(10));
         }
           String cardNumber = bin + randomDigits;
-//        String cardNumber = bin.concat(randomDigits.toString());
         return cardNumber;
     }
 

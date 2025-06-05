@@ -13,7 +13,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name = "account")
+@Table(name = "account", schema = "cms")
 @Getter
 @Setter
 @Audited
@@ -27,6 +27,8 @@ public class Account {
     private BigDecimal balance;
     @Column
     private String status;
+    @Column
+    private String currency;
     @ManyToOne
     @JoinColumn(name = "account_holder_id")
     private AccountHolder accountHolder;

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "account_holder")
+@Table(name = "account_holder", schema = "cms")
 @Getter
 @Setter
 @Audited

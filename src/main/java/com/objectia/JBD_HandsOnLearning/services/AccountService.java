@@ -20,10 +20,10 @@ public class AccountService {
 
     @Autowired
     AccountHolderRepository accountHolderRepository;
-    public Account  createAccount(Account account) throws Exception {
+    public Account  createAccount(Account account , UUID accountHolderId) throws Exception {
         log.trace("creating account {}",account);
         log.debug("getting account holder by id {}",account.getAccountHolder().getId());
-       Optional<AccountHolder>  accountHolder = accountHolderRepository.findById(account.getAccountHolder().getId());
+       Optional<AccountHolder>  accountHolder = accountHolderRepository.findById(accountHolderId);
        if(accountHolder.isPresent()){
            log.info("account holder is retrieved of id {}",accountHolder.get().getId());
            log.error("this is error level");

@@ -5,9 +5,10 @@ import com.objectia.JBD_HandsOnLearning.models.AccountCard;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.UUID;
 
 @Repository
 public interface AccountCardRepository extends JpaRepository<AccountCard, UUID> {
-    AccountCard findByCardId(UUID accountId);
+    List<AccountCard> findByCardId(UUID accountId);
 }
